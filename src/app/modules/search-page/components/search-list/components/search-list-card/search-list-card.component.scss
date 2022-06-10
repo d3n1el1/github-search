@@ -1,0 +1,50 @@
+@import "../../../../../../../assets/styles/vars/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-color-1,
+  0 0 2px rgba(#000, 0.09);
+  margin-bottom: 8px;
+  padding: 24px 32px;
+  border-radius: 8px;
+  transition: box-shadow .2s ease-in;
+
+  &:hover {
+    box-shadow: $shadow-color-2;
+  }
+}
+
+.search-list-card {
+
+  &__title {
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-icon,
+    &-count {
+      font-size: 11px;
+      color: #626d82;
+    }
+
+    &-icon {
+      margin-right: 4px;
+    }
+  }
+
+}

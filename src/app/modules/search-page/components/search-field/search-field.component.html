@@ -1,0 +1,15 @@
+<input type="text"
+       placeholder="Search"
+       class="search-field"
+       [value]="value || ''"
+       [formControl]="searchFieldControl"
+/>
+
+<app-search-field-error-message *ngIf="!!searchFieldControl.errors && searchFieldControl.touched"
+                                [errors]="searchFieldControl.errors"
+                                class="search-field__error-message"
+></app-search-field-error-message>
+
+<div *ngIf="searchFieldControl.value" class="search-field__reset-button"
+     (click)="resetValue()"
+></div>

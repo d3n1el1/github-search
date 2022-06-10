@@ -1,0 +1,15 @@
+:host {
+  padding: 32px 0;
+}
+
+.search-page {
+  &__input {
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

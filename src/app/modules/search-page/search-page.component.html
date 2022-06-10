@@ -1,0 +1,28 @@
+<app-search-field class="search-page__input"
+                  [value]="query"
+                  (valueChange)="searchValue($event)"
+></app-search-field>
+
+<ng-container *ngIf="isLoadingDataWithDebounce$ | async; then searchLabel; else dataContainer"></ng-container>
+
+<ng-template #searchLabel>
+  <div class="search-page__label">
+    <span>Searching results for "{{query}}"</span>
+  </div>
+</ng-template>
+
+<ng-template #dataContainer>
+  <ng-container *ngIf="!query || !isValid; then enterValue; else repositoriesList"></ng-container>
+</ng-template>
+
+<ng-template #enterValue>
+  <div class="search-page__label">
+    <span>Enter a valid search query in the search field</span>
+  </div>
+</ng-template>
+
+<ng-template #repositoriesList>
+  <app-search-list [repositoriesList]="searchList$ | async"
+                   [isLoading]="(isLoading$ | async)"
+  ></app-search-list>
+</ng-template>

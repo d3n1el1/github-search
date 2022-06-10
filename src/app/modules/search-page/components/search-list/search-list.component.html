@@ -1,0 +1,13 @@
+<ng-container *ngIf="repositoriesList?.length; else emptyList">
+  <app-search-list-card *ngFor="let repository of repositoriesList; trackBy: _trackByFn"
+                        [repositoryCard]="repository"
+  ></app-search-list-card>
+</ng-container>
+
+<ng-template #emptyList>
+  <div *ngIf="!isLoading"
+       class="search-list__empty-list"
+  >
+    Repositories list is empty :(
+  </div>
+</ng-template>

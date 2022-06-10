@@ -1,0 +1,28 @@
+@import "../assets/styles/mixins/breakpoints";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include respond-to('x-small') {
+    width: 500px;
+  }
+
+  @include respond-to('small') {
+    width: 750px;
+  }
+
+  @include respond-to('medium') {
+    width: 950px;
+  }
+
+  @include respond-to('large') {
+    width: 1150px;
+  }
+
+  @include respond-to('x-large') {
+    width: 1400px;
+  }
+}
+

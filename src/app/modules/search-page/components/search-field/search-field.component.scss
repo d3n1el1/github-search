@@ -1,0 +1,52 @@
+@import "../../../../../assets/styles/vars/colors";
+
+:host {
+  display: flex;
+  position: relative;
+}
+
+.search-field {
+  width: 100%;
+  padding: 12px 44px 12px 12px;
+  outline: 1px solid #ccc;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  transition: outline .1s ease-in;
+
+  &:focus-visible {
+    outline: 2px solid $accent-1;
+  }
+
+  &.ng-touched.ng-invalid {
+    outline: 2px solid $danger-1;
+  }
+
+  &__error-message {
+    position: absolute;
+    bottom: -22px;
+  }
+
+  &__reset-button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: $dark-3;
+    top: calc(50% - 10px);
+    right: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:after {
+      content: '\00d7';
+      color: white;
+      position: absolute;
+      display: flex;
+      width: 10px;
+      height: 18px;
+      left: calc(50% - 5px);
+      top: calc(50% - 9px);
+    }
+  }
+}

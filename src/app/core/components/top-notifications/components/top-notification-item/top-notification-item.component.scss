@@ -1,0 +1,12 @@
+@import "../../../../../../assets/styles/vars/colors";
+
+:host {
+  width: 300px;
+  min-height: 50px;
+  padding: 8px 16px;
+  background: $danger-1;
+  display: flex;
+  margin-bottom: 16px;
+
+  box-shadow: $shadow-color-1;
+}

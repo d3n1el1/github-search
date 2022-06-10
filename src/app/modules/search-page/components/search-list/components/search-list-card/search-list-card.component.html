@@ -1,0 +1,11 @@
+<a class="search-list-card__title"
+   target="_blank"
+   [href]="repositoryCard.svn_url"
+>
+  {{repositoryCard.full_name}}
+</a>
+<div class="search-list-card__stars">
+  <span class="search-list-card__stars-icon">☆</span>
+  <span class="search-list-card__stars-count">{{repositoryCard.stargazers_count}}</span>
+</div>
+<p *ngIf="repositoryCard.description" class="search-list-card__description">{{repositoryCard.description}}</p>
